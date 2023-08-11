@@ -29,3 +29,7 @@ and in settings.json
 
 // Now start a new app
 python manage.py startapp alert
+
+
+// Setting up debug configuation
+Go to view.py/ .py file, then click on Run & debug, icon -> Create new lauch.json -> search for Django Run Debug. and use it.
