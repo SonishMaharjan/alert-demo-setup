@@ -1,5 +1,5 @@
 """
-WSGI config for alert project.
+WSGI config for hospitals_management project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'alert.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hospitals_management.settings')
 
 application = get_wsgi_application()
