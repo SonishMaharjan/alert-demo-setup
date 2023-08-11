@@ -1,3 +1,5 @@
+import debug_toolbar
+
 """
 URL configuration for hospitals_management project.
 
@@ -19,6 +21,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('alert/', include('alert.urls'))
+    path('alert/', include('alert.urls')),
+    path('__debug__', include(debug_toolbar.urls))
     
 ]
