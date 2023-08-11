@@ -9,7 +9,7 @@ pipenv shell
 // start django project
 django-admin startproject alert // Create alert project and app
 
-// django-admin startproject alert . // this will not create another alert folder inside.
+// django-admin startproject hospital_management . // this will not create another alert folder inside.
 
 python manage.py runserver
 
@@ -25,3 +25,7 @@ and in settings.json
 }
 
 // When you open terminal in VS code, it automatically start the venv.
+
+
+// Now start a new app
+python manage.py startapp alert
