@@ -36,3 +36,7 @@ Go to view.py/ .py file, then click on Run & debug, icon -> Create new lauch.jso
 
 // using django-debug-toolbar
 pipenv install django-debug-toolbar
+
+python manage.py migrate // run first migrations
+
+python manage.py createsuperuser ( admin: admin)

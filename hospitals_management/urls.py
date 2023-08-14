@@ -18,9 +18,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+# from alert.admin import alert_site
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('blog-admin/', alert_site.urls),
+    
     path('alert/', include('alert.urls')),
     path('__debug__', include(debug_toolbar.urls))
     
