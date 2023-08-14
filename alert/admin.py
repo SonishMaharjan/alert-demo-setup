@@ -13,6 +13,8 @@
 from django.contrib import admin
 from .models import Post, Category
 
+from django import forms
+
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
@@ -46,6 +48,7 @@ import django.apps
 models = django.apps.apps.get_models()
 
 
+# this will register all your custom models too.
 for model in models:
     try: 
         admin.site.register(model)
@@ -54,4 +57,21 @@ for model in models:
 
 
 admin.site.unregister(django.contrib.sessions.models.Session)
+# admin.site.unregister(Post)
 
+
+## create cusom form for admin
+
+# class PostForm(forms.ModelForm):
+#     def __init__(self, *args, **kwargs):
+#         super(PostForm, self).__init__(*args, **kwargs)
+#         self.fields['title'].help_text = 'New Help Text'
+
+#     class Meta: 
+#         model = Post
+#         exclude = ('slug',)
+
+# class PostFormAdmin(admin.ModelAdmin):
+#     form = PostForm
+    
+# admin.site.register(Post, PostFormAdmin)
