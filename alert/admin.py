@@ -16,7 +16,15 @@ from .models import Post, Category
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    fields = ['title', 'author']
+    
+    # ('author', 'slug' ) -> adds in same line q
+    # fields = ['title', ('author', 'slug')]
+    
+    # Adding Section
+    fieldsets = (
+        ('The Sction 1', {'fields': ('title', 'author'), 'description': 'All fieds on this section are required'}),
+        ('The Section 2', {'fields': ('slug',), 'classes':('collapse',)})
+        )
     
     list_display = ('title', 'display_categories')
 
